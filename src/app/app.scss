@@ -1,0 +1,116 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+mat-toolbar {
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%) !important;
+  color: white !important;
+  box-shadow: 0 4px 20px rgba(30, 58, 138, 0.3);
+  z-index: 2;
+  position: relative;
+}
+
+mat-toolbar button {
+  color: white !important;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  border-radius: 50%;
+}
+
+mat-toolbar button:hover {
+  transform: scale(1.1) rotate(5deg);
+  background: rgba(255, 255, 255, 0.15) !important;
+}
+
+.example-container {
+  height: 100vh;
+  margin: 0;
+  border: none;
+  background-color: #f8fafc;
+}
+
+.example-sidenav {
+  padding: 30px 20px;
+  width: 260px;
+  background: linear-gradient(180deg, #ffffff 0%, #f0f9ff 100%) !important;
+  border-right: 1px solid #bae6fd !important;
+  box-shadow: 4px 0 25px rgba(14, 165, 233, 0.05);
+}
+
+.example-sidenav p {
+  color: #0284c7;
+  font-weight: 600;
+  font-size: 1.15rem;
+  margin-bottom: 24px;
+}
+
+.example-sidenav button {
+  width: 100%;
+  border-radius: 12px;
+  background-color: #e0f2fe !important;
+  color: #0369a1 !important;
+  font-weight: 600;
+  padding: 10px 0;
+  box-shadow: 0 2px 8px rgba(2, 132, 199, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.example-sidenav button:hover {
+  background-color: #bae6fd !important;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(2, 132, 199, 0.2);
+}
+
+.example-sidenav-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.page-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.sidenav-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #bae6fd;
+}
+
+
+.example-sidenav-content::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(14,165,233,0.03) 0%, transparent 60%);
+  animation: pulse 15s infinite alternate;
+}
+
+.page-content h1 {
+  color: #0f172a;
+  font-size: 4rem;
+  font-weight: 800;
+  letter-spacing: -1.5px;
+  text-shadow: 0 10px 30px rgba(14, 165, 233, 0.2);
+  font-family: 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.1); }
+}
