@@ -30,34 +30,70 @@ mat-toolbar button:hover {
 
 .example-sidenav {
   padding: 30px 20px;
-  width: 260px;
+  width: 300px;
   background: linear-gradient(180deg, #ffffff 0%, #f0f9ff 100%) !important;
   border-right: 1px solid #bae6fd !important;
   box-shadow: 4px 0 25px rgba(14, 165, 233, 0.05);
 }
 
-.example-sidenav p {
-  color: #0284c7;
-  font-weight: 600;
-  font-size: 1.15rem;
-  margin-bottom: 24px;
+.sidenav-menu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
-.example-sidenav button {
+.sidenav-menu li {
   width: 100%;
+}
+
+.menu-item {
+    cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 14px 16px;
   border-radius: 12px;
-  background-color: #e0f2fe !important;
-  color: #0369a1 !important;
+  text-decoration: none;
+  color: #0369a1;
   font-weight: 600;
-  padding: 10px 0;
-  box-shadow: 0 2px 8px rgba(2, 132, 199, 0.1);
+  font-size: 1.05rem;
+  background-color: transparent;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.example-sidenav button:hover {
-  background-color: #bae6fd !important;
-  transform: translateY(-3px);
-  box-shadow: 0 6px 15px rgba(2, 132, 199, 0.2);
+.menu-item mat-icon {
+  margin-right: 12px;
+  color: #0284c7;
+  transition: transform 0.3s ease;
+}
+
+.active-link {
+  background-color: #0284c7;
+  color: white;
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.3);
+}
+
+.active-link mat-icon {
+  color: white;
+}
+
+.active-link:hover {
+  background-color: #0369a1;
+  color: white;
+}
+
+.active-link:hover mat-icon {
+  color: white;
+}
+
+.menu-item:hover {
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.1);
+}
+
+.menu-item:hover mat-icon {
+  transform: scale(1.1);
 }
 
 .example-sidenav-content {
@@ -113,4 +149,8 @@ mat-toolbar button:hover {
 @keyframes pulse {
   0% { transform: scale(1); }
   100% { transform: scale(1.1); }
+}
+
+.router-container {
+  padding: 24px;
 }
