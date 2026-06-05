@@ -34,7 +34,7 @@ export class DialogAddUser {
     try {
       const docRef = await addDoc(collection(db, "users"), this.user.toJSON());
       console.log("Document written with ID: ", docRef.id);
-      this.dialogRef.close();
+      setTimeout(() => this.dialogRef.close());
     } catch (e) {
       console.error("Error adding document: ", e);
     } finally {

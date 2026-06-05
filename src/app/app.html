@@ -2,11 +2,16 @@
   <mat-drawer #drawer class="example-sidenav" [opened]="true" mode="side">
     <div class="sidenav-header">
       <mat-icon style="color: #0284c7; margin-right: 8px">dashboard</mat-icon>
-      <h2 style="margin: 0; color: #0f172a; font-size: 1.25rem">Menü</h2>
+      <h2 style="margin: 0; color: #0f172a; font-size: 1.25rem">Simple CRM</h2>
     </div>
     <ul class="sidenav-menu">
       <li>
-        <a routerLink="/dashboard" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}" class="menu-item">
+        <a
+          routerLink="/dashboard"
+          routerLinkActive="active-link"
+          [routerLinkActiveOptions]="{ exact: true }"
+          class="menu-item"
+        >
           <mat-icon>dashboard</mat-icon>
           <span>Dashboard</span>
         </a>
@@ -46,10 +51,6 @@
 
     <div class="router-container">
       <router-outlet></router-outlet>
-    </div>
-
-    <div class="page-content">
-      <h1>Dashboard Content</h1>
     </div>
   </div>
 </mat-drawer-container>
